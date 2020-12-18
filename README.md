@@ -168,7 +168,7 @@ def plot_pairs(tool, colnames, newnames):
 </details>
 
 ## Data Preparation
-The data provided was already pretty clean. All I had to do was add a group to indicate the groups we were interested in, and delete all other entries.
+The data provided was already pretty clean. All I had to do was add a group variable to indicate the groups we were interested in, and delete all other entries. I didn't actually start analysing the data in this notebook. I did some preliminary EDA, which can be found in the other folders in this repository.
 
 <details><summary style="color: #8497B0;"><em>Code</em></summary>
 <p>
