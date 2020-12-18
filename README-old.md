@@ -12,12 +12,12 @@ We looked at tools preferred by (1) employees in companies with 1,000 or more st
 | Business Intelligence | Tableau, Power BI, and Google Data Studio |
 | Data Visualisation Libraries | Matplotlib, Seaborn, ggplot2, Plotly |
 | ML Frameworks | As many as possible; Default: Scikit-Learn for Python, Caret for R |
-| Big Data Products (Cloud Only) | Google Cloud BigQuery, AWS Redshift, and Azure Data Lake Storage |
+| Big Data Products (Cloud Only) | Google Cloud BigQuery, Azure Data Lake Storage, and AWS Redshift |
 | Databases | MySQL, Microsoft SQL Server, PostgreSQL, and MongoDB |
-| Automated ML | Auto-SKlearn, Google Cloud AutoML, and Auto-Keras |
+| Automated ML | Auto-SKlearn, Auto-Keras, and AutoML |
 | ML Management (Open Source) | TensorBoard, Trains, and Sacred + Omniboard |
 | ML Management (Paid; Cloud) | Neptune.ai, Weights & Biases, and Comet.ml |
-| Sharing & Deployment | GitHub, Shiny, Streamlit, and Dash |
+| Sharing & Deployment | Shiny, Streamlit, and Dash |
 
 ## Approach
 The types of tools that we aim to identify are:
@@ -37,7 +37,7 @@ To do so, we look at the responses of two groups of survey participants:
 1. **Employees in companies with 1,000 or more staff *and* more than 20 people managing data science workloads.** This group captures the tools employed by large enterprises at the time of the survey.
 2. **Students.** This group captures the tools that new employees would be familiar with when they enter the workforce.
 
-<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<details><summary style="color: #8497B0;"><em>Setup Code</em></summary>
 <p>
 
 ```python
@@ -164,7 +164,8 @@ def plot_pairs(tool, colnames, newnames):
     display(df_pairs.head(10))
 ```
 
-</p></details>
+</p>
+</details>
 
 ## Data Preparation
 The data provided was already pretty clean. All I had to do was add a group variable to indicate the groups we were interested in, and delete all other entries. I didn't actually start analysing the data in this notebook. I did some preliminary EDA, which can be found in the other folders in this repository.
@@ -189,7 +190,8 @@ df.loc[(df.Q20.isin(['1000-9,999 employees', '10,000 or more employees'])) & (df
 df = df[df.group != '']
 ```
 
-</p></details>
+</p>
+</details>
 
 ## Comparison of Groups
 To better understand each group, we compared the two groups in terms of age, gender, coding experience, and ML experience. We see that:
@@ -237,7 +239,6 @@ plt.show()
 ```
 
 </p></details>
-
 
 ![No. of Respondents by Group](/images/output_7_0.png)
 
@@ -287,7 +288,6 @@ plot_multi('Q7', 'Programming Languages', names, len(names)-1)
 
 </p></details>
 
-
 ![Programming Languages](/images/output_9_0.png)
 
 
@@ -329,7 +329,6 @@ plot_pairs(TOOL, colnames, newnames)
 ```
 
 </p></details>
-
 
 ![Programming Languages Pairs - Large Enterprise Employees](/images/output_11_0.png)
 
@@ -571,6 +570,8 @@ plot_multi('Q31_A', 'BI Tools', names, len(names)-1)
 
 </p></details>
 
+</p></details>
+
 
 ![Business Intelligence Tools](/images/output_15_0.png)
 
@@ -595,7 +596,7 @@ plot_multi('Q14', 'Dataviz Libraries', names, len(names)-1)
 </p></details>
 
 
-![Data Visualisation Libraries](/images/output_17_0.png)
+![Data Visualisation Libraries](/images/output_17_0.svg)
 
 
 ## ML Frameworks
@@ -619,7 +620,7 @@ plot_multi('Q16', 'ML Frameworks', names, len(names)-1)
 </p></details>
 
 
-![ML Frameworks](/images/output_19_0.png)
+![ML Frameworks](/images/output_19_0.svg)
 
 
 ## Big Data Products
@@ -692,7 +693,7 @@ plot_multi('Q29_A', 'Big Data Products Used', names, len(names)-1)
 ## Automated ML Tools
 I'm not yet sold on automated ML. The gist of my discomfort is that while you gain efficiency and democratise model development, you lose the expertise from developing models and you get a bunch of models that are weighted the same, regardless of whether it was developed by a PhD or that guy from marketing. I'll save this discussion for another post.
 
-My point here is that I'm not familiar with automated ML. And so, I would have to go with the data here: **(1) Auto-SKlearn, (2) Google Cloud AutoML, and (3) Auto-Keras**.
+My point here is that I'm not familiar with automated ML. And so, I would have to go with the data here: **(1) Auto-SKlearn, (2) Auto-Keras, and (3) AutoML**.
 
 <details><summary style="color: #8497B0;"><em>Code</em></summary>
 <p>
@@ -707,7 +708,6 @@ plot_multi('Q34_A', 'Automated ML Tools', names, len(names)-1)
 ```
 
 </p></details>
-
 
 ![Automated ML Tools](/images/output_23_0.png)
 
@@ -763,11 +763,11 @@ To summarise, we picked out the following tools for large enterprises:
 | Business Intelligence | Tableau, Power BI, and Google Data Studio |
 | Data Visualisation Libraries | Matplotlib, Seaborn, ggplot2, Plotly |
 | ML Frameworks | As many as possible; Default: Scikit-Learn for Python, Caret for R |
-| Big Data Products (Cloud Only) | Google Cloud BigQuery, AWS Redshift, and Azure Data Lake Storage |
+| Big Data Products (Cloud Only) | Google Cloud BigQuery, Azure Data Lake Storage, and AWS Redshift |
 | Databases | MySQL, Microsoft SQL Server, PostgreSQL, and MongoDB |
-| Automated ML | Auto-SKlearn, Google Cloud AutoML, and Auto-Keras |
+| Automated ML | Auto-SKlearn, Auto-Keras, and AutoML |
 | ML Management (Open Source) | TensorBoard, Trains, and Sacred + Omniboard |
 | ML Management (Paid; Cloud) | Neptune.ai, Weights & Biases, and Comet.ml |
-| Sharing & Deployment | GitHub, Shiny, Streamlit, and Dash |
+| Sharing & Deployment | Shiny, Streamlit, and Dash |
 
 Many of these are open source, which means there is flexibility for large enterprises to configure them to fit their purposes. Of course, there may be other tools or entire categories of tools that we may be missing out here, but insights on what and how useful those tools are cannot be gleaned from the data available.
