@@ -287,27 +287,27 @@ plot_bar('Q23', 'Experience in ML Methods', sortorder)
 ```
 
 
-![png](/images/output_9_0.png)
+![png](/2019/images/output_9_0.png)
 
 
 
-![png](/images/output_9_1.png)
+![png](/2019/images/output_9_1.png)
 
 
 
-![png](/images/output_9_2.png)
+![png](/2019/images/output_9_2.png)
 
 
 
-![png](/images/output_9_3.png)
+![png](/2019/images/output_9_3.png)
 
 
 
-![png](/images/output_9_4.png)
+![png](/2019/images/output_9_4.png)
 
 
 
-![png](/images/output_9_5.png)
+![png](/2019/images/output_9_5.png)
 
 
 
@@ -316,7 +316,7 @@ plot_bar('Q23', 'Experience in ML Methods', sortorder)
 ```
 
 
-![png](/images/output_10_0.png)
+![png](/2019/images/output_10_0.png)
 
 
 ## Company Details
@@ -381,31 +381,31 @@ plot_bar('Q11', 'Expenditure on ML / Cloud Computing (USD) in Past 5 years', )
 ```
 
 
-![png](/images/output_12_0.png)
+![png](/2019/images/output_12_0.png)
 
 
 
-![png](/images/output_12_1.png)
+![png](/2019/images/output_12_1.png)
 
 
 
-![png](/images/output_12_2.png)
+![png](/2019/images/output_12_2.png)
 
 
 
-![png](/images/output_12_3.png)
+![png](/2019/images/output_12_3.png)
 
 
 
-![png](/images/output_12_4.png)
+![png](/2019/images/output_12_4.png)
 
 
 
-![png](/images/output_12_5.png)
+![png](/2019/images/output_12_5.png)
 
 
 
-![png](/images/output_12_6.png)
+![png](/2019/images/output_12_6.png)
 
 
 ## Programming Languages
@@ -422,15 +422,15 @@ plot_bar('Q19', 'Recommended Programming Language to Learn First')
 ```
 
 
-![png](/images/output_14_0.png)
+![png](/2019/images/output_14_0.png)
 
 
 
-![png](/images/output_14_1.png)
+![png](/2019/images/output_14_1.png)
 
 
 
-![png](/images/output_14_2.png)
+![png](/2019/images/output_14_2.png)
 
 
 ## Programming IDEs
@@ -461,19 +461,19 @@ plot_multi('Q17', 'Hosted Notebooks', names, len(names)-1)
 ```
 
 
-![png](/images/output_16_0.png)
+![png](/2019/images/output_16_0.png)
 
 
 
-![png](/images/output_16_1.png)
+![png](/2019/images/output_16_1.png)
 
 
 
-![png](/images/output_16_2.png)
+![png](/2019/images/output_16_2.png)
 
 
 
-![png](/images/output_16_3.png)
+![png](/2019/images/output_16_3.png)
 
 
 ## Data Visualisation Libraries
@@ -490,11 +490,11 @@ plot_multi('Q20', 'Data Visualisation Libraries', names, len(names)-1)
 ```
 
 
-![png](/images/output_18_0.png)
+![png](/2019/images/output_18_0.png)
 
 
 
-![png](/images/output_18_1.png)
+![png](/2019/images/output_18_1.png)
 
 
 ## ML Frameworks
@@ -513,11 +513,11 @@ plot_multi('Q28', 'ML Frameworks', names, len(names)-1)
 ```
 
 
-![png](/images/output_20_0.png)
+![png](/2019/images/output_20_0.png)
 
 
 
-![png](/images/output_20_1.png)
+![png](/2019/images/output_20_1.png)
 
 
 ## Big Data Products
@@ -544,19 +544,19 @@ plot_multi('Q34', 'Relational Database Products', names, len(names)-1)
 ```
 
 
-![png](/images/output_22_0.png)
+![png](/2019/images/output_22_0.png)
 
 
 
-![png](/images/output_22_1.png)
+![png](/2019/images/output_22_1.png)
 
 
 
-![png](/images/output_22_2.png)
+![png](/2019/images/output_22_2.png)
 
 
 
-![png](/images/output_22_3.png)
+![png](/2019/images/output_22_3.png)
 
 
 ## Automated ML Tools
@@ -586,19 +586,19 @@ plot_multi('Q33', 'Automated ML Tools', names, len(names)-1)
 ```
 
 
-![png](/images/output_24_0.png)
+![png](/2019/images/output_24_0.png)
 
 
 
-![png](/images/output_24_1.png)
+![png](/2019/images/output_24_1.png)
 
 
 
-![png](/images/output_24_2.png)
+![png](/2019/images/output_24_2.png)
 
 
 
-![png](/images/output_24_3.png)
+![png](/2019/images/output_24_3.png)
 
 
 
@@ -624,11 +624,11 @@ plot_multi('Q13', 'DS Learning Platforms', names, len(names)-1)
 ```
 
 
-![png](/images/output_27_0.png)
+![png](/2019/images/output_27_0.png)
 
 
 
-![png](/images/output_27_1.png)
+![png](/2019/images/output_27_1.png)
 
 
 
@@ -637,7 +637,7 @@ plot_bar('Q14', 'Primary Tools Used to Analyse Data')
 ```
 
 
-![png](/images/output_28_0.png)
+![png](/2019/images/output_28_0.png)
 
 
 
@@ -650,11 +650,11 @@ plot_multi('Q21', 'Hardware Types', names, len(names)-1)
 ```
 
 
-![png](/images/output_29_0.png)
+![png](/2019/images/output_29_0.png)
 
 
 
-![png](/images/output_29_1.png)
+![png](/2019/images/output_29_1.png)
 
 
 
@@ -674,11 +674,11 @@ plot_multi('Q24', 'ML Algorithms', names, len(names)-1)
 ```
 
 
-![png](/images/output_30_0.png)
+![png](/2019/images/output_30_0.png)
 
 
 
-![png](/images/output_30_1.png)
+![png](/2019/images/output_30_1.png)
 
 
 
@@ -695,11 +695,11 @@ plot_multi('Q26', 'Computer Vision Methods', names, len(names)-1)
 ```
 
 
-![png](/images/output_31_0.png)
+![png](/2019/images/output_31_0.png)
 
 
 
-![png](/images/output_31_1.png)
+![png](/2019/images/output_31_1.png)
 
 
 
@@ -716,11 +716,11 @@ plot_multi('Q27', 'NLP Methods', names, len(names)-1)
 ```
 
 
-![png](/images/output_32_0.png)
+![png](/2019/images/output_32_0.png)
 
 
 
-![png](/images/output_32_1.png)
+![png](/2019/images/output_32_1.png)
 
 
 
@@ -738,11 +738,11 @@ plot_multi('Q29', 'Cloud Computing Platforms', names, len(names)-1)
 ```
 
 
-![png](/images/output_33_0.png)
+![png](/2019/images/output_33_0.png)
 
 
 
-![png](/images/output_33_1.png)
+![png](/2019/images/output_33_1.png)
 
 
 
@@ -759,11 +759,11 @@ plot_multi('Q30', 'Cloud Computing Products', names, len(names)-1)
 ```
 
 
-![png](/images/output_34_0.png)
+![png](/2019/images/output_34_0.png)
 
 
 
-![png](/images/output_34_1.png)
+![png](/2019/images/output_34_1.png)
 
 
 
@@ -780,11 +780,11 @@ plot_multi('Q32', 'ML Products', names, len(names)-1)
 ```
 
 
-![png](/images/output_35_0.png)
+![png](/2019/images/output_35_0.png)
 
 
 
-![png](/images/output_35_1.png)
+![png](/2019/images/output_35_1.png)
 
 
 
@@ -805,11 +805,11 @@ plot_multi('Q12', 'Favourite Media Source for DS Topics', names, len(names)-1)
 ```
 
 
-![png](/images/output_36_0.png)
+![png](/2019/images/output_36_0.png)
 
 
 
-![png](/images/output_36_1.png)
+![png](/2019/images/output_36_1.png)
 
 
 
