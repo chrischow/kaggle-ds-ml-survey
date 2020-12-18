@@ -1,5 +1,5 @@
 
-# Data Science (DS) Tools for Large Organisations
+# Data Science Tools for Large Organisations
 As small-to-medium-sized companies scale up, or as big companies (like mine) jump on the data bandwagon, some standardisation in tools is required to make sure that data scientists are speaking and coding in the same or similar languages. What better way to get inspiration for possible enterprise tools than from data science professionals and future data scientists? This notebook aims to use data from the [2020 Kaggle Data Science (DS) and Machine Learning (ML) survey](https://www.kaggle.com/c/kaggle-survey-2020/overview) to identify ideal tools for large enterprises.
 
 ## TL;DR
