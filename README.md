@@ -37,6 +37,8 @@ To do so, we look at the responses of two groups of survey participants:
 1. **Employees in companies with 1,000 or more staff *and* more than 20 people managing data science workloads.** This group captures the tools employed by large enterprises at the time of the survey.
 2. **Students.** This group captures the tools that new employees would be familiar with when they enter the workforce.
 
+<details><summary style="color: #8497B0;"><em>Setup Code</em></summary>
+<p>
 
 ```python
 # Import required modules
@@ -162,9 +164,14 @@ def plot_pairs(tool, colnames, newnames):
     display(df_pairs.head(10))
 ```
 
+</p>
+</details>
+
 ## Data Preparation
 The data provided was already pretty clean. All I had to do was add a group to indicate the groups we were interested in, and delete all other entries.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 # Load data
@@ -183,6 +190,9 @@ df.loc[(df.Q20.isin(['1000-9,999 employees', '10,000 or more employees'])) & (df
 df = df[df.group != '']
 ```
 
+</p>
+</details>
+
 ## Comparison of Groups
 To better understand each group, we compared the two groups in terms of age, gender, coding experience, and ML experience. We see that:
 
@@ -190,6 +200,8 @@ To better understand each group, we compared the two groups in terms of age, gen
 * The large enterprise employees were generally older and more experienced
 * The proportions of men and women from both groups were similar
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 df.group.value_counts().plot.barh(color=colors[::-1])
@@ -226,6 +238,7 @@ plt.gca().invert_yaxis()
 plt.show()
 ```
 
+</p></details>
 
 ![No. of Respondents by Group](/images/output_7_0.png)
 
@@ -261,6 +274,8 @@ It's possible that we observed this result because of selection bias. Student re
 
 If the above is true, we ought to take reference from the Large Enterprise group: **(1) Python, (2) SQL, and (3) R are the programming languages to focus on**.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -271,6 +286,7 @@ names = [
 plot_multi('Q7', 'Programming Languages', names, len(names)-1)
 ```
 
+</p></details>
 
 ![Programming Languages](/images/output_9_0.png)
 
@@ -285,6 +301,8 @@ Here are some interesting findings:
 
 The top 3 pairs by absolute numbers for large enterprise employees were: (1) Python and SQL, (2) Python and R, and (3) R and SQL. Meanwhile, the top 3 pairs for students were (1) C++ and Python, (2) C and Python, and (3) Python and SQL. This doesn't change the conclusion from above that Python, R, and SQL are the most popular languages in large enterprises.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 # Create heatmap
@@ -310,6 +328,7 @@ TOOL = 'Programming Language'
 plot_pairs(TOOL, colnames, newnames)
 ```
 
+</p></details>
 
 ![Programming Languages Pairs - Large Enterprise Employees](/images/output_11_0.png)
 
@@ -511,6 +530,8 @@ Respondents from both groups were in agreement on 4 of the top 5 programming IDE
 
 The consensus top 3: **(1) Jupyter, (2) Visual Studio Code, and (3) PyCharm**. To cater for R users, I'd throw in **RStudio** as a fourth tool.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -522,6 +543,8 @@ names = [
 plot_multi('Q9', 'Programming IDEs', names, len(names)-1)
 ```
 
+</p></details>
+
 
 ![Programming IDEs](/images/output_13_0.png)
 
@@ -531,6 +554,8 @@ This question was answered only by large enterprise employees. The top two picks
 
 For now, we stick to the top 3: **(1) Tableau, (2) Power BI, and (3) Google Data Studio**. 
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -543,6 +568,10 @@ names = [
 plot_multi('Q31_A', 'BI Tools', names, len(names)-1)
 ```
 
+</p></details>
+
+</p></details>
+
 
 ![Business Intelligence Tools](/images/output_15_0.png)
 
@@ -552,6 +581,8 @@ Once again, respondents from both groups were in agreement on the top 4 Dataviz 
 
 The consensus top 3 + 1 (because I'm a huge fan of Plotly): **(1) Matplotlib, (2) Seaborn, (3) ggplot2, and (4) Plotly**.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -562,6 +593,8 @@ names = [
 plot_multi('Q14', 'Dataviz Libraries', names, len(names)-1)
 ```
 
+</p></details>
+
 
 ![Data Visualisation Libraries](/images/output_17_0.svg)
 
@@ -571,6 +604,8 @@ Again, the two groups were in agreement on the top 3. The students preferred PyT
 
 I wouldn't limit myself to any top *X* here, because it's good to test out as many open source frameworks as possible to see what works. However, if we had to choose an "enterprise" ML framework for standardisation, we should go for **scikit-learn for Python and Caret for R**.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -581,6 +616,8 @@ names = [
 
 plot_multi('Q16', 'ML Frameworks', names, len(names)-1)
 ```
+
+</p></details>
 
 
 ![ML Frameworks](/images/output_19_0.svg)
@@ -632,6 +669,8 @@ Using the 2019 categories, the top tools were:
 | 4    | AWS Athena        | Oracle Database      |
 | 5    | -                 | MongoDB              |
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -645,6 +684,8 @@ names = [
 plot_multi('Q29_A', 'Big Data Products Used', names, len(names)-1)
 ```
 
+</p></details>
+
 
 ![Big Data Products](/images/output_21_0.png)
 
@@ -654,6 +695,8 @@ I'm not yet sold on automated ML. The gist of my discomfort is that while you ga
 
 My point here is that I'm not familiar with automated ML. And so, I would have to go with the data here: **(1) Auto-SKlearn, (2) Auto-Keras, and (3) AutoML**.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -664,6 +707,7 @@ names = [
 plot_multi('Q34_A', 'Automated ML Tools', names, len(names)-1)
 ```
 
+</p></details>
 
 ![Automated ML Tools](/images/output_23_0.png)
 
@@ -671,6 +715,8 @@ plot_multi('Q34_A', 'Automated ML Tools', names, len(names)-1)
 ## ML Management Tools
 It's interesting that "Others" came up third. This suggests that perhaps, some companies develop their own ML management tools. Hence, we'll break the top picks into open source and paid ones. The open source solutions: **(1) TensorBoard, (2) Trains, (3) Sacred + Omniboard**. The paid, cloud-enabled solutions: **(1) Neptune.ai, (2) Weights & Biases, and (3) Comet.ml**.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -681,6 +727,8 @@ names = [
 plot_multi('Q35_A', 'ML Management Tools', names, len(names)-1)
 ```
 
+</p></details>
+
 
 ![ML Management Tools](/images/output_25_0.png)
 
@@ -688,6 +736,8 @@ plot_multi('Q35_A', 'ML Management Tools', names, len(names)-1)
 ## Sharing & Deployment Tools
 I don't think this question was sufficiently pointed. It actually asks about a few categories of tools. *GitHub* allows you to share code and perform version control, *Kaggle*, *Colab*, and *NBViewer* allow for sharing of notebooks online. *Shiny*, *Dash*, and *Streamlit* are lightweight web app frameworks. For version control and sharing of notebooks, I'm of the view that **(1) GitHub**, which has NBViewer built in, is sufficient. Then, I'd pick all three web app frameworks: **(2) Shiny, (3) Streamlit, and (4) Dash**. Shiny is hands-down the best web app framework for R, while Streamlit and Dash (for Python) have their own strengths.
 
+<details><summary style="color: #8497B0;"><em>Code</em></summary>
+<p>
 
 ```python
 names = [
@@ -696,6 +746,8 @@ names = [
 ]
 plot_multi('Q36', 'Sharing & Deployment Tools', names, len(names)-1)
 ```
+
+</p></details>
 
 
 ![Sharing & Deployment Tools](/images/output_27_0.png)
